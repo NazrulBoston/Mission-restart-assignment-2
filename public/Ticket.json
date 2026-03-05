@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "title": "Login Issue",
+    "description": "User unable to login with correct credentials.",
+    "customer": "John Smith",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-01"
+  },
+  {
+    "id": 2,
+    "title": "Payment Failed",
+    "description": "Transaction declined but money deducted.",
+    "customer": "Sara Johnson",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2026-03-02"
+  },
+  {
+    "id": 3,
+    "title": "Bug in Dashboard",
+    "description": "Dashboard not loading analytics data properly.",
+    "customer": "Michael Lee",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-02-28"
+  },
+  {
+    "id": 4,
+    "title": "Password Reset Email Not Received",
+    "description": "Customer did not receive password reset email.",
+    "customer": "Emily Davis",
+    "priority": "Medium",
+    "status": "Resolved",
+    "createdAt": "2026-02-25"
+  },
+  {
+    "id": 5,
+    "title": "Account Suspended",
+    "description": "Account suspended without notification.",
+    "customer": "David Brown",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-03"
+  },
+  {
+    "id": 6,
+    "title": "UI Alignment Issue",
+    "description": "Button alignment broken on mobile view.",
+    "customer": "Sophia Wilson",
+    "priority": "Low",
+    "status": "In Progress",
+    "createdAt": "2026-02-20"
+  },
+  {
+    "id": 7,
+    "title": "Feature Request - Dark Mode",
+    "description": "Customer requesting dark mode feature.",
+    "customer": "Daniel Martinez",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2026-03-01"
+  },
+  {
+    "id": 8,
+    "title": "Slow Page Loading",
+    "description": "Website loading very slowly on checkout page.",
+    "customer": "Olivia Anderson",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2026-02-27"
+  },
+  {
+    "id": 9,
+    "title": "Error 500 on Profile Update",
+    "description": "Server error when updating profile information.",
+    "customer": "James Thomas",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-04"
+  },
+  {
+    "id": 10,
+    "title": "Refund Request",
+    "description": "Customer requesting refund for wrong product delivered.",
+    "customer": "Isabella Moore",
+    "priority": "Medium",
+    "status": "Resolved",
+    "createdAt": "2026-02-22"
+  },
+  {
+    "id": 11,
+    "title": "Notification Not Working",
+    "description": "Push notifications are not being received.",
+    "customer": "William Taylor",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2026-02-26"
+  },
+  {
+    "id": 12,
+    "title": "Data Sync Problem",
+    "description": "Data not syncing between mobile and web app.",
+    "customer": "Ava Harris",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2026-03-03"
+  },
+  {
+    "id": 13,
+    "title": "Incorrect Billing Amount",
+    "description": "Customer charged extra amount in last invoice.",
+    "customer": "Benjamin Clark",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-02"
+  },
+  {
+    "id": 14,
+    "title": "Search Not Returning Results",
+    "description": "Search function not showing relevant products.",
+    "customer": "Mia Rodriguez",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2026-02-24"
+  },
+  {
+    "id": 15,
+    "title": "App Crash on Startup",
+    "description": "Mobile app crashes immediately after opening.",
+    "customer": "Ethan Walker",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-04"
+  }
+]
