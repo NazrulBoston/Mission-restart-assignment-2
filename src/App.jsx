@@ -4,6 +4,9 @@ import './App.css'
 import Banner from './components/Banner/Banner'
 import CustomerTickets from './components/CustomerTickets/CustomerTickets'
 import Navbar from './shared/Navbar/Navbar'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 
 
 
@@ -20,12 +23,15 @@ function App() {
 
   const handleAddTicket = (ticket) => {
     setInProgressTickets([...inProgressTickets, ticket])
+    toast.success("Ticket added to In-Progress")
+
   }
 
   const handleCompleteTicket = (ticket) => {
     const remaining = inProgressTickets.filter(t => t.id !== ticket.id)
     setInProgressTickets(remaining)
     setResolvedTickets([...resolvedTickets, ticket])
+    toast.success("Ticket marked as completed")
   }
 
   return (
@@ -46,8 +52,8 @@ function App() {
 
         ></CustomerTickets>
       </Suspense>
+      <ToastContainer />
 
-      <h1 className='text-3xl text-center'>This is a App page</h1>
     </>
   )
 }

@@ -11,7 +11,7 @@ const CustomerTickets = ({ promiseTickets, handleAddTicket, inProgressTickets, h
 
             <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
 
-                {/* LEFT SIDE - Ticket Cards */}
+                {/* LEFT SIDE*/}
                 <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
 
                     {tickets.map((ticket) => (
@@ -26,12 +26,11 @@ const CustomerTickets = ({ promiseTickets, handleAddTicket, inProgressTickets, h
 
                 </div>
 
-                {/* RIGHT SIDE - Summary */}
+                {/* RIGHT SIDE */}
                 <div className="bg-white p-6 rounded-xl shadow-md">
 
-                    <h3 className="text-xl font-semibold mb-4">Task Status</h3>
+                    <h3 className="text-xl font-semibold mb-4 text-center">Task Status</h3>
 
-                    {/* ✅ ADDED: Showing selected tickets */}
                     {
                         inProgressTickets.map(ticket => (
                             <p key={ticket.id} className="text-center p-4 my-2">
@@ -42,7 +41,7 @@ const CustomerTickets = ({ promiseTickets, handleAddTicket, inProgressTickets, h
                         ))
                     }
 
-                    <h3 className="text-xl font-semibold mb-4">Resolve task</h3>
+                    <h3 className="text-xl font-semibold mb-4 text-center">Resolve task</h3>
 
                     {
                         resolvedTickets.map(ticket => (
