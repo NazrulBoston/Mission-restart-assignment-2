@@ -1,32 +1,62 @@
-import { useEffect, useState } from "react";
+import { use } from "react";
 import Card from "./Card";
 
-const CustomerTickets = () => {
-  const [tickets, setTickets] = useState([]);
+const CustomerTickets = ({ promiseTickets, handleAddTicket, inProgressTickets, handleCompleteTicket, resolvedTickets }) => {
 
-  useEffect(() => {
-    fetch("/Ticket.json")
-      .then((res) => res.json())
-      .then((data) => setTickets(data));
-  }, []);
+    const tickets = use(promiseTickets)
 
-  return (
-    <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
+    return (
+        <div className="mt-12">
+            <h1 className="text-3xl font-bold">Customer Tickets</h1>
 
-      {/* LEFT SIDE - Ticket Cards */}
-      <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
-        {tickets.map((ticket) => (
-          <Card key={ticket.id} ticket={ticket} />
-        ))}
-      </div>
+            <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
 
-      {/* RIGHT SIDE - Summary */}
-      <div className="bg-white p-6 rounded-xl shadow-md">
-        <h3 className="text-xl font-semibold mb-4">Ticket Summary</h3>
-      </div>
+                {/* LEFT SIDE - Ticket Cards */}
+                <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
 
-    </div>
-  );
+                    {tickets.map((ticket) => (
+
+                        <Card
+                            key={ticket.id}
+                            ticket={ticket}
+                            handleAddTicket={handleAddTicket}
+                        />
+
+                    ))}
+
+                </div>
+
+                {/* RIGHT SIDE - Summary */}
+                <div className="bg-white p-6 rounded-xl shadow-md">
+
+                    <h3 className="text-xl font-semibold mb-4">Task Status</h3>
+
+                    {/* ✅ ADDED: Showing selected tickets */}
+                    {
+                        inProgressTickets.map(ticket => (
+                            <p key={ticket.id} className="text-center p-4 my-2">
+                                {ticket.title} <br />
+                                {ticket.description}
+                                <button onClick={() => handleCompleteTicket(ticket)} className="btn w-full bg-[#02A53B] text-white">Completed</button>
+                            </p>
+                        ))
+                    }
+
+                    <h3 className="text-xl font-semibold mb-4">Resolve task</h3>
+
+                    {
+                        resolvedTickets.map(ticket => (
+                            <p key={ticket.id} className="p-2 border-b">
+                                {ticket.title}
+                            </p>
+                        ))
+                    }
+
+                </div>
+
+            </div>
+        </div>
+    );
 };
 
 export default CustomerTickets;
