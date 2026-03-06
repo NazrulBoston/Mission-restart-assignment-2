@@ -6,6 +6,7 @@ import CustomerTickets from './components/CustomerTickets/CustomerTickets'
 import Navbar from './shared/Navbar/Navbar'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import Footer from './shared/Footer/Footer'
 
 
 
@@ -41,6 +42,7 @@ function App() {
         inProgressTickets={inProgressTickets}
         resolvedTickets={resolvedTickets}
       ></Banner>
+     
       <Suspense fallback={<span className="loading loading-spinner loading-xl"></span>}>
         <CustomerTickets
           promiseTickets={promiseTickets}
@@ -53,6 +55,8 @@ function App() {
         ></CustomerTickets>
       </Suspense>
       <ToastContainer />
+       <Footer></Footer>
+
 
     </>
   )
